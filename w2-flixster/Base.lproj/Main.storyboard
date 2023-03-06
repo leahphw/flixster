@@ -1,24 +1,202 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4SA-BZ-02g">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Fresh Movies-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="w2_flixster" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fxS-WN-IwU">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" red="0.34801868559999999" green="0.063399298980000005" blue="0.022991828570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="0.30891591489999998" green="0.056275864670000002" blue="0.020408506940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="180" id="p2h-C5-FN2" customClass="MovieCell" customModule="w2_flixster" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="180"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p2h-C5-FN2" id="jpO-EP-Y4O">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="180"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gwI-fe-oCm">
+                                                    <rect key="frame" x="16" y="16" width="361" height="148"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QCY-sh-ZVY">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="148"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="150" id="Ate-Sw-4cH"/>
+                                                                <constraint firstAttribute="width" constant="100" id="Bji-ze-fBP"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="blM-1L-xVX">
+                                                            <rect key="frame" x="120" y="0.0" width="241" height="75.333333333333329"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwt-qr-HAc">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="241" height="29.666666666666668"/>
+                                                                    <fontDescription key="fontDescription" name="GranthaSangamMN-Bold" family="Grantha Sangam MN" pointSize="17"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ti-Dr-y72">
+                                                                    <rect key="frame" x="0.0" y="45.666666666666664" width="241" height="29.666666666666664"/>
+                                                                    <fontDescription key="fontDescription" name="GranthaSangamMN-Regular" family="Grantha Sangam MN" pointSize="17"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gwI-fe-oCm" firstAttribute="top" secondItem="jpO-EP-Y4O" secondAttribute="top" constant="16" id="ePx-LX-85B"/>
+                                                <constraint firstAttribute="trailing" secondItem="gwI-fe-oCm" secondAttribute="trailing" constant="16" id="jRr-dL-Cje"/>
+                                                <constraint firstAttribute="bottom" secondItem="gwI-fe-oCm" secondAttribute="bottom" constant="16" id="jaO-Tr-MbX"/>
+                                                <constraint firstItem="gwI-fe-oCm" firstAttribute="leading" secondItem="jpO-EP-Y4O" secondAttribute="leading" constant="16" id="w0b-S6-nKg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.34801868559999999" green="0.063399298980000005" blue="0.022991828570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="movieCellDescription" destination="4ti-Dr-y72" id="Tym-RW-qcR"/>
+                                            <outlet property="movieCellPoster" destination="QCY-sh-ZVY" id="Wlh-10-8BV"/>
+                                            <outlet property="movieCellTitle" destination="pwt-qr-HAc" id="5LW-MU-9Pa"/>
+                                            <segue destination="33c-IG-GiR" kind="show" id="kLS-aU-Fp9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.34801868559999999" green="0.063399298980000005" blue="0.022991828570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fxS-WN-IwU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4bT-fV-ddQ"/>
+                            <constraint firstItem="fxS-WN-IwU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KcF-tx-8vh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fxS-WN-IwU" secondAttribute="bottom" id="Lar-ye-ilO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fxS-WN-IwU" secondAttribute="trailing" id="gGm-Ah-aop"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Fresh Movies" id="i9C-nD-Yro"/>
+                    <connections>
+                        <outlet property="tableView" destination="fxS-WN-IwU" id="XZ8-Zr-FCt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1040.4580152671756" y="-27.464788732394368"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="kD4-j6-iYB">
+            <objects>
+                <viewController storyboardIdentifier="detailViewController" id="33c-IG-GiR" customClass="DetailViewController" customModule="w2_flixster" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BDn-ir-DJA">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="top" axis="vertical" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9CL-MD-9g3">
+                                <rect key="frame" x="0.0" y="103" width="393" height="515"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rh3-Xg-HZP">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="240"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="240" id="4ZW-MA-SDr"/>
+                                            <constraint firstAttribute="width" constant="393" id="Dqv-u4-zeP"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChH-nW-c3D">
+                                        <rect key="frame" x="163.33333333333334" y="284.33333333333331" width="66.666666666666657" height="48.666666666666686"/>
+                                        <fontDescription key="fontDescription" name="GranthaSangamMN-Bold" family="Grantha Sangam MN" pointSize="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="lj7-Jh-eET">
+                                        <rect key="frame" x="106.33333333333333" y="377.33333333333331" width="180.66666666666669" height="67.333333333333314"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XsA-uc-Be5">
+                                                <rect key="frame" x="0.0" y="0.0" width="40.333333333333336" height="67.333333333333329"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFS-52-FDX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="40.333333333333336" height="29.666666666666668"/>
+                                                        <fontDescription key="fontDescription" name="GranthaSangamMN-Regular" family="Grantha Sangam MN" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2T-Ap-GoR">
+                                                        <rect key="frame" x="0.0" y="37.666666666666686" width="40.333333333333336" height="29.666666666666671"/>
+                                                        <fontDescription key="fontDescription" name="GranthaSangamMN-Regular" family="Grantha Sangam MN" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPN-rP-BUa">
+                                                <rect key="frame" x="140.33333333333331" y="0.0" width="40.333333333333343" height="67.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="GranthaSangamMN-Regular" family="Grantha Sangam MN" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIH-nL-WQW">
+                                        <rect key="frame" x="178.66666666666666" y="489" width="35.666666666666657" height="26"/>
+                                        <fontDescription key="fontDescription" name="GranthaSangamMN-Regular" family="Grantha Sangam MN" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SKB-uB-FPO"/>
+                        <color key="backgroundColor" red="0.34801868559999999" green="0.063399298980000005" blue="0.022991828570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9CL-MD-9g3" firstAttribute="leading" secondItem="SKB-uB-FPO" secondAttribute="leading" id="XxW-XD-3p7"/>
+                            <constraint firstItem="9CL-MD-9g3" firstAttribute="top" secondItem="SKB-uB-FPO" secondAttribute="top" id="oIE-Z8-pCU"/>
+                            <constraint firstItem="9CL-MD-9g3" firstAttribute="trailing" secondItem="SKB-uB-FPO" secondAttribute="trailing" id="r1T-vt-Uxv"/>
+                            <constraint firstItem="SKB-uB-FPO" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="9CL-MD-9g3" secondAttribute="bottom" constant="200" id="se4-Sh-zFT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qe6-1p-FRX"/>
+                    <connections>
+                        <outlet property="movieBackdrop" destination="rh3-Xg-HZP" id="eJn-TJ-s3g"/>
+                        <outlet property="movieDescription" destination="kIH-nL-WQW" id="42J-rC-Y3j"/>
+                        <outlet property="moviePopularity" destination="DPN-rP-BUa" id="9Rc-fT-gCW"/>
+                        <outlet property="movieTitle" destination="ChH-nW-c3D" id="CXo-Kz-QT2"/>
+                        <outlet property="movieVoteAverage" destination="eFS-52-FDX" id="6oY-8X-rev"/>
+                        <outlet property="movieVotes" destination="y2T-Ap-GoR" id="huw-9b-njI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xwU-VY-v3u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1816.030534351145" y="-10.563380281690142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ebk-Ar-Gnz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4SA-BZ-02g" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aPs-00-W0s">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wKv-Fj-kHQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hJ6-YL-tIz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.74045801526717" y="-27.464788732394368"/>
         </scene>
     </scenes>
 </document>
