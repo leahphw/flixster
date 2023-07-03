@@ -1,4 +1,4 @@
-# *Flixster*
+# Codepath Project *Flixster*
 
 **Leah Le**
 
